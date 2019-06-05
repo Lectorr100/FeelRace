@@ -1,0 +1,49 @@
+.login-menu *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.login-menu ol,
+.login-menu ul{
+    list-style: none;
+}
+
+.login-menu > ul{
+    display: flex ;
+    justify-content: end;
+}
+
+.login-menu > ul li a{
+    display: flex;
+    background:#cccccc;
+    padding:  5px 10px 5px 10px;
+    font-size: 0.85rem;
+    color:  #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #646464
+ }
+
+ .login-menu > ul li{
+    position: relative;
+ }
+
+ .login-menu > ul li >a i.fa{
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    font-size: 1rem;
+}
+
+.login-menu li a:hover{
+    background: #646464;
+    color: #ffffff;
+    box-shadow: 1px 5px 10px -5px black;
+    transition: all 0.3s ease;
+}
+

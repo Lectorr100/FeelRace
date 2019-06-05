@@ -1,0 +1,128 @@
+.dws-menu *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.dws-menu{
+position: relative;
+ background: #444444;
+ height: 40px;
+ margin: 30px 0;
+ padding: 0; 
+ width: 100%;
+ z-index: 10
+}
+.dws-menu ul {
+ display: -webkit-box;
+ display: -webkit-flex;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-orient: horizontal;
+ -webkit-box-direction: normal;
+ -webkit-flex-direction: row;
+ -ms-flex-direction: row;
+ flex-direction: row;
+ height: 40px; 
+ text-align: center;
+ font: 15px Arial, Helvetica, sans-serif;
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ -webkit-box-pack: center;
+ -webkit-justify-content: center;
+ -ms-flex-pack: center;
+ justify-content: center;
+}
+
+/** Основные пункты **/
+.dws-menu > ul > li {
+ position: relative; 
+ height: 40px;
+ padding: 0;
+ margin: 0
+}
+.dws-menu > ul > li > a {
+ border-left: 1px solid #666;
+ display: block;
+ color: #fff;
+ text-decoration: none;
+ padding: 0 20px;
+ line-height: 40px;
+}
+.dws-menu > ul > li:first-child > a {
+ border: none
+}
+.dws-menu > ul > li:hover > a, .dws-menu > ul > li.hover > a, .dws-menu > ul > li.active > a {
+ color: #fff
+}
+.dws-menu > ul > li:hover, .dws-menu > ul > li.hover, .dws-menu > ul > li.active {
+ background: #666
+}
+
+/* Выпадающие подпункты */
+.dws-menu ul li ul {
+ position: absolute;
+ left: 0;
+ top: 40px;
+ display: none;
+ list-style: none;
+ visibility: hidden;
+ padding: 0;
+ margin: 0;
+ width: 200px
+}
+.dws-menu > ul > li ul li {
+ background-color: #666;
+ position: relative;
+ left: 0;
+ display: list-item;
+ float: none;
+ height: auto;
+ margin: 0;
+ text-align: left;
+}
+.dws-menu ul li ul li a {
+ border-bottom: 1px solid #999;
+ display: block;
+ color: #fff;
+ padding: 10px 15px;
+ text-decoration: none;
+}
+.dws-menu ul li ul li.parent a {
+ position: relative;
+}
+.dws-menu ul li ul > li.parent > a::before {
+ border-top: 1px solid #fff;
+ border-right: 1px solid #fff;
+ content: "";
+ display: block;
+ position: absolute;
+ right: 15px;
+ top: 50%;
+ transform: translateY(-50%) rotate(45deg);
+ height: 6px;
+ width: 6px;
+}
+.dws-menu ul li ul li:hover, .dws-menu ul li ul li.hover {
+ background-color: #444
+}
+.dws-menu ul li:hover ul, .dws-menu ul li.hover ul {
+ display: block
+}
+
+/* Выпадающие пункты второго уровня */
+.dws-menu ul li:hover > ul {
+ opacity: 1;
+ visibility: visible;
+ margin: 0;
+}
+.dws-menu ul li ul li ul {
+ top: 0;
+ left: 200px;
+ margin: 0 0 0 20px;
+ width: 180px
+}

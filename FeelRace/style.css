@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=cyrillic');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+header{
+    margin-top: 200px;
+}
+html{
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+  }
+  
+.container {
+    min-width: 300px;
+    margin: 0 auto;
+  }
+
+body{
+    background-color: #cccccc;
+}
+
+.dws-menu ul,
+.dws-menu ol{
+    list-style: none;
+}
+.dws-menu> ul{
+    display: flex ;
+    justify-content: start;
+}
+.dws-menu > ul li a{
+   display: block;
+   background:#333333;
+   padding:  15px 50px 15px 40px;
+   font-size: 0.85rem;
+   color:  #ffffff;
+   text-decoration: none;
+   transition: all 0.3s ease;
+}
+.dws-menu> ul li{
+    position: relative;
+    border-right: 1px solid #333333
+}
+.dws-menu > ul li >a i.fa{
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    font-size: 1rem;
+}
+.dws-menu >ul li:first-child{
+    border-left: 1px solid #333333
+}
+.dws-menu >ul li:last-child{
+    border-right: 1px solid #333333
+}
+.dws-menu li a:hover{
+    background: #646464;
+    color: #ffffff;
+    box-shadow: 1px 5px 10px -5px black;
+    transition: all 0.3s ease;
+}
+
+.dws-menu li ul{
+    position: absolute;
+    min-width: 130px;
+    display: none;
+}
+.dws-menu li > ul li{
+  border: 1px solid #333333;  
+}
+.dws-menu li> ul li a{
+    padding: 10px;
+    background: #333333;
+
+}
+.dws-menu li:hover>ul{
+    display: block;
+}
